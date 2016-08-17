@@ -25,7 +25,7 @@ echo "Numero:"."<h1> $random</h1>";
 		}
 //Creo 10 numeros random
 $par =0;
-$vueltas = 0;
+$vueltas = 10000;
 $impar = 0;
 $cont1 = 0;
 $cont2 = 0;
@@ -38,7 +38,7 @@ $cont8 = 0;
 $cont9 = 0;
 $cont10 = 0;
 
-for ($vueltas=0; $vueltas < 10 ; $vueltas++)
+for ($i=0; $i < $vueltas ; $i++)
 {
 	$random = (rand(0,10));
 	if ($random % 2 == 0)
@@ -69,6 +69,10 @@ for ($vueltas=0; $vueltas < 10 ; $vueltas++)
 			$cont6++;
 			break;
 		case 7:
+			if ($cont7/$vueltas*100 > 5)
+			{
+				continue;
+			}
 			$cont7++;
 			break;
 		case 8:
@@ -83,19 +87,19 @@ for ($vueltas=0; $vueltas < 10 ; $vueltas++)
 	}	
 }
 echo "<br><br>";
-echo "<br>Numeros Pares: $par";
+echo "<br>Numeros Pares: $par ";
 echo "<br>Numeros impares: $impar";
 echo "<br><br>";
-echo "<br>Unos: $cont1";
-echo "<br>Dos: $cont2";
-echo "<br>Tres: $cont3";
-echo "<br>Cuatro: $cont4";
-echo "<br>Cincos: $cont5";
-echo "<br>Seis: $cont6";
-echo "<br>Siete: $cont7";
-echo "<br>Ochos: $cont8";
-echo "<br>Nueves: $cont9";
-echo "<br>Diez: $cont10";
+echo "<br>Unos: $cont1 ".'_|%'.$cont1/$vueltas*100;
+echo "<br>Dos: $cont2".'___|%'.$cont2/$vueltas*100;
+echo "<br>Tres: $cont3".'__|%'.$cont3/$vueltas*100;
+echo "<br>Cuatro: $cont4".'_|%'.$cont4/$vueltas*100;
+echo "<br>Cincos: $cont5".'_|%'.$cont5/$vueltas*100;
+echo "<br>Seis: $cont6".'__|%'.$cont6/$vueltas*100;
+echo "<br>Siete: $cont7".'_|%'.$cont7/$vueltas*100;
+echo "<br>Ochos: $cont8".'_|%'.$cont8/$vueltas*100;
+echo "<br>Nueves: $cont9".'|%'.$cont9/$vueltas*100;
+echo "<br>Diez: $cont10".'_|%'.$cont10/$vueltas*100;
 
 ?>
 </body>
