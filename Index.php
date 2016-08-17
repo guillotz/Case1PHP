@@ -25,7 +25,7 @@ echo "Numero:"."<h1> $random</h1>";
 		}
 //Creo 10 numeros random
 $par =0;
-$vueltas = 10000;
+$vueltas = 10;
 $impar = 0;
 $cont1 = 0;
 $cont2 = 0;
@@ -69,7 +69,7 @@ for ($i=0; $i < $vueltas ; $i++)
 			$cont6++;
 			break;
 		case 7:
-			if ($cont7/$vueltas*100 > 5)
+			if ($cont7+1/$vueltas*100 > 5)
 			{
 				continue;
 			}
