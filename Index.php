@@ -25,7 +25,7 @@ echo "Numero:"."<h1> $random</h1>";
 		}
 //Creo 10 numeros random
 $par =0;
-$vueltas = 10;
+$vueltas = 100000;
 $impar = 0;
 $cont1 = 0;
 $cont2 = 0;
