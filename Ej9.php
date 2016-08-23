@@ -11,6 +11,7 @@ $arrayLapicera = array(	array('color'=>'verde', 'marca' => 'silvapen', 'trazo'=>
 
 foreach ($arrayLapicera as $value)
  {
+ 	echo "<br>";
 	foreach ($value as $key => $value2) 
 	{
 		echo "<br>$key => $value2";
