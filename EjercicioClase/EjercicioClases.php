@@ -1,5 +1,5 @@
 <?php
-class FiguraGeometrica
+abstract class FiguraGeometrica
 {
 	protected $_color;
 
@@ -20,6 +20,7 @@ class FiguraGeometrica
 	{
 		echo "<br>" . $this->_color;
 	}
+	
 
 }
 
