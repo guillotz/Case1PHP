@@ -1,8 +1,16 @@
+
+<html>
+<head>
+	<title>Ejercicios</title>
+</head>
+<body>
+	<h1>EJERCICIO 01</h1>
 <?php
-$archivo = fopen("texto.txt", "r")or die ("No se puede abrir archivo");
-$texto = fread($archivo,filesize("texto.txt"));
+$PATH = "misArchivos/Palabras.txt";
+$archivo = fopen($PATH, "r")or die ("No se puede abrir archivo");
+$texto = fread($archivo,filesize($PATH));
 $arrayArchivo = explode(" ",$texto);
-echo $texto;
+echo $texto."<br>";
 fclose($archivo);
 
 
@@ -37,9 +45,16 @@ foreach ($arrayArchivo as $value)
 }
 echo "<br>Cantidad de 1: ".$l1;
 echo "<br>Cantidad de 2: ".$l2;
-echo "<br>Cantidad de 3: $l3";
-echo "<br>Cantidad de 4: $l4";
-echo "<br>Cantidad de 4+: $l5";
+echo "<br>Cantidad de 3: ".$l3;
+echo "<br>Cantidad de 4: ".$l4;
+echo "<br>Cantidad de 4+: ".$l5;
 
 
 ?>
+<h1>EJERCICIO 02<h1>
+<?php
+
+?>
+
+</body>
+</html>
