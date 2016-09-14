@@ -55,6 +55,7 @@ echo "<br>Cantidad de 4+: ".$l5;
 <body>
 <h1><?php echo "Ejercicio02";?><h1>
 
+
 <form action="upload.php" method="post" enctype="multipart/form-data">
     Elija el archivo a subir:
     <input type="file" name="archivoParaSubir" id="archivoParaSubir">
@@ -64,7 +65,7 @@ echo "<br>Cantidad de 4+: ".$l5;
 $PATH2 = "misArchivos/";
 $directorio = $PATH2;
 $nombreArchivo = date ("Y-m-d");
-$target_file = $directorio . basename($_FILES["archivoParaSubir"][$nombreArchivo]);
+$target_file = $directorio . basename($_FILES["archivoParaSubir"]['name']);
 $fileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
 ?>
