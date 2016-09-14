@@ -63,6 +63,10 @@ echo "<br>Cantidad de 4+: ".$l5;
 <?php
 $PATH2 = "misArchivos/";
 $directorio = $PATH2;
+$nombreArchivo = date ("Y-m-d");
+$target_file = $directorio . basename($_FILES["archivoParaSubir"][$nombreArchivo]);
+$fileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
 ?>
 
 
