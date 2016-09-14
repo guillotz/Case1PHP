@@ -1,11 +1,8 @@
-
-<html>
-<head>
-	<title>Ejercicios</title>
-</head>
-<body>
-	<h1>EJERCICIO 01</h1>
 <?php
+
+
+
+
 $PATH = "misArchivos/Palabras.txt";
 $archivo = fopen($PATH, "r")or die ("No se puede abrir archivo");
 $texto = fread($archivo,filesize($PATH));
@@ -51,10 +48,25 @@ echo "<br>Cantidad de 4+: ".$l5;
 
 
 ?>
-<h1>EJERCICIO 02<h1>
-<?php
+<html>
+<head>
+	<title>Ejercicios</title>
+</head>
+<body>
+<h1><?php echo "Ejercicio02";?><h1>
 
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Elija el archivo a subir:
+    <input type="file" name="archivoParaSubir" id="archivoParaSubir">
+    <input type="submit" value="Subir Archivo" name="submit">
+</form>
+<?php
+$PATH2 = "misArchivos/";
+$directorio = $PATH2;
 ?>
+
 
 </body>
 </html>
+
+
